@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2> The in app template </h2>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Price</th>
+      <th scope="col">Summary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>{{ object.name }}</td>
+      <td>{{ object.description }}</td>
+      <td>{{ object.price }}</td>
+      <td>{{ object.summary }}</td>
+    </tr>
+  </tbody>
+</table>
+
+{% endblock %}
