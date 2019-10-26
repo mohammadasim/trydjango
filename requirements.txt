@@ -1,4 +1,4 @@
-Django==2.2.1
+Django==2.2.4
 psycopg2-binary==2.8.3
 django-autoslug==1.9.6
 django-method-override==1.0.3
