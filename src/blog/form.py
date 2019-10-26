@@ -1,5 +1,10 @@
-from django.forms import forms
+from django.forms import ModelForm
+from .models import Article
 
 
-class BlogForm(forms.ModelForm):
-    pass
+class ArticleForm(ModelForm):
+    class Meta:
+        model = Article
+        # The generated Form class will have a form field for every model field specified, in the order specified in the
+        # fields attribute.
+        fields = ['title', 'body', 'author']
