@@ -13,8 +13,9 @@ class Article(models.Model):
     slug = AutoSlugField(populate_from=['title'], default=title, unique=True)
 
     def get_absolute_url(self):
-        return reverse('blog:article_details', kwargs={"article_slug": self.slug})
+        return reverse('blog:article_details', kwargs={"slug": self.slug})
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
         super(Article, self).save(*args, **kwargs)
+
